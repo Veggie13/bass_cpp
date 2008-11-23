@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="bass_cpp" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\libbass_cpp" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Debug\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\libbass_cpp" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="external\BASS_2.4\c" />
+		</Compiler>
+		<Linker>
+			<Add library="external\BASS_2.4\c\bass.lib" />
+		</Linker>
+		<Unit filename="bass.hpp" />
+		<Unit filename="bass_channel.cpp" />
+		<Unit filename="bass_channel.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="bass_exception.cpp" />
+		<Unit filename="bass_exception.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="bass_plugin.cpp" />
+		<Unit filename="bass_plugin.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="bass_sample.cpp" />
+		<Unit filename="bass_sample.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="bass_stream.cpp" />
+		<Unit filename="bass_stream.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="bass_system.cpp" />
+		<Unit filename="bass_system.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="bass_types.h">
+			<Option compile="1" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
