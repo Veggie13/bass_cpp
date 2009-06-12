@@ -6,8 +6,9 @@
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
-			<Target title="Release">
-				<Option output="lib\libbass_cpp" prefix_auto="1" extension_auto="1" />
+			<Target title="Windows">
+				<Option platforms="Windows;" />
+				<Option output="lib\win\libbass_cpp" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj\Release\" />
 				<Option type="2" />
