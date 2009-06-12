@@ -36,38 +36,25 @@
 		</Build>
 		<Compiler>
 			<Add directory="external\BASS_2.4\c" />
+			<Add directory="include" />
 		</Compiler>
 		<Linker>
 			<Add library="external\BASS_2.4\c\bass.lib" />
 		</Linker>
-		<Unit filename="bass.hpp" />
 		<Unit filename="bass_channel.cpp" />
-		<Unit filename="bass_channel.h">
-			<Option compile="1" />
-		</Unit>
 		<Unit filename="bass_exception.cpp" />
-		<Unit filename="bass_exception.h">
-			<Option compile="1" />
-		</Unit>
 		<Unit filename="bass_plugin.cpp" />
-		<Unit filename="bass_plugin.h">
-			<Option compile="1" />
-		</Unit>
 		<Unit filename="bass_sample.cpp" />
-		<Unit filename="bass_sample.h">
-			<Option compile="1" />
-		</Unit>
 		<Unit filename="bass_stream.cpp" />
-		<Unit filename="bass_stream.h">
-			<Option compile="1" />
-		</Unit>
 		<Unit filename="bass_system.cpp" />
-		<Unit filename="bass_system.h">
-			<Option compile="1" />
-		</Unit>
-		<Unit filename="bass_types.h">
-			<Option compile="1" />
-		</Unit>
+		<Unit filename="include\bass.hpp" />
+		<Unit filename="include\bass_channel.h" />
+		<Unit filename="include\bass_exception.h" />
+		<Unit filename="include\bass_plugin.h" />
+		<Unit filename="include\bass_sample.h" />
+		<Unit filename="include\bass_stream.h" />
+		<Unit filename="include\bass_system.h" />
+		<Unit filename="include\bass_types.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
