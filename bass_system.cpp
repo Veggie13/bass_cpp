@@ -115,16 +115,26 @@ unsigned System::GetGlobalStreamVolume()
 
 IDirectSound* System::GetIDirectSound()
 {
+#ifdef _WIN32
     void* result = BASS_GetDSoundObject(BASS_OBJECT_DS);
     BASS_ASSERT(result);
     return reinterpret_cast<IDirectSound*>(result);
+#else
+	BASS_ASSERT(false);
+	return NULL;
+#endif
 }
 
 IDirectSound3DListener* System::GetIDirectSound3DListener()
 {
+#ifdef _WIN32
     void* result = BASS_GetDSoundObject(BASS_OBJECT_DS3DL);
     BASS_ASSERT(result);
     return reinterpret_cast<IDirectSound3DListener*>(result);
+#else
+	BASS_ASSERT(false);
+	return NULL;
+#endif
 }
 
 void System::GetInfo(Info& info)
@@ -447,8 +457,12 @@ void System::GetEAXParameters(
         float* decay,
         float* damp )
 {
+#ifdef _WIN32
     BOOL result = BASS_GetEAXParameters(env, vol, decay, damp);
     BASS_ASSERT(result == TRUE);
+#else
+	BASS_ASSERT(false);
+#endif
 }
 
 void System::Set3DFactors(float distf, float rollf, float doppf)
@@ -473,8 +487,12 @@ void System::SetEAXParameters(
         float decay,
         float dampening )
 {
+#ifdef _WIN32
     BOOL result = BASS_SetEAXParameters(env, vol, decay, dampening);
     BASS_ASSERT(result == TRUE);
+#else
+	BASS_ASSERT(false);
+#endif
 }
 
 Sample* System::CreateSample(
