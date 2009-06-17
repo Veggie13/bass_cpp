@@ -20,7 +20,6 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add directory="external\BASS_2.4\win" />
 				</Linker>
 			</Target>
 			<Target title="Mac">
@@ -37,7 +36,6 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add directory="external/BASS_2.4/mac" />
 				</Linker>
 			</Target>
 		</Build>
@@ -45,9 +43,6 @@
 			<Add directory="external\BASS_2.4\c" />
 			<Add directory="include" />
 		</Compiler>
-		<Linker>
-			<Add library="bass" />
-		</Linker>
 		<Unit filename="bass_channel.cpp" />
 		<Unit filename="bass_exception.cpp" />
 		<Unit filename="bass_plugin.cpp" />
