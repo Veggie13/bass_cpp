@@ -13,8 +13,7 @@ namespace BASS
         static void ThrowError();
 
         virtual ~Exception() throw();
-
-        virtual const char* what();
+        virtual const char* what() const throw();
 
     private:
         Exception(const char* msg);

@@ -13,7 +13,7 @@ Exception::Exception(const char* msg)
 
 Exception::~Exception() throw() { }
 
-const char* Exception::what()
+const char* Exception::what() const throw()
 {
     return m_msg.c_str();
 }
