@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="basstemp" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\basstemp" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="C:\BASS_2.4\mp3-free" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters='&quot;F:\My Music\MP3 Files\A Perfect Circle - Judith.mp3&quot; &quot;F:\My Music\MP3 Files\American Hi-Fi - Flavor of the Week.mp3&quot;' />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\basstemp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="C:\projects\bass_cpp" />
+			<Add directory="C:\BASS_2.4\c" />
+		</Compiler>
+		<Linker>
+			<Add library="C:\projects\bass_cpp\libbass_cpp.a" />
+			<Add library="C:\BASS_2.4\c\bass.lib" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
